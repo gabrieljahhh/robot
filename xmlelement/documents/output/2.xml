@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+  <Body>
+    <dadosDoCliente xmlns="">
+      <id>2</id>
+      <nome>William</nome>
+      <email>will@q4sure.com</email>
+      <contato status="false" tipo="residencial">	</contato>
+      <contato status="true" tipo="celular">11 98765-4321</contato><status ativo="true" />
+    </dadosDoCliente>
+  </Body>
+</Envelope>
