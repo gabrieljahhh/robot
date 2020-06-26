@@ -7,8 +7,8 @@ Library           OperatingSystem
 
 
 *** Variable ***
-${XML_CONTENT}    documents/example/element.xml
-${OUTPUT}         documents/output
+${XML_CONTENT}    ../tests/documents/example/element.xml
+${OUTPUT}         ../tests/documents/output
 &{PESSOA}         nome=William                                       email=will@q4sure.com    telefone=11 98765-4321    tipo=celular    status=true    fixo=false
 
 
