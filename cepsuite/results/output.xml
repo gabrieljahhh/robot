@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.3 on darwin)" generated="20200626 20:36:26.624" rpa="false">
+<suite id="s1" name="CepSuite" source="/Users/galeite/robotframework/cepsuite/CepSuite.robot">
+<test id="s1-t1" name="Cenário de Teste 02: Buscar outro endereço cep pelo site UI">
+<kw name="Abrir navegador" library="ResourceCepSuite" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200626 20:36:27.944" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200626 20:36:27.944" endtime="20200626 20:37:11.243"></status>
+</kw>
+<status status="PASS" starttime="20200626 20:36:27.943" endtime="20200626 20:37:11.244"></status>
+</kw>
+<kw name="Acessar o site" library="ResourceCepSuite">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20200626 20:37:11.247" level="INFO">Opening url 'https://cepbrasil.org/'</msg>
+<status status="PASS" starttime="20200626 20:37:11.246" endtime="20200626 20:37:19.790"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>【 Busca CEP Correios 】 - Consultar CEP, Ruas, Bairros e Cidades - CEPBrasil.org</arg>
+</arguments>
+<msg timestamp="20200626 20:37:19.875" level="INFO">Page title is '【 Busca CEP Correios 】 - Consultar CEP, Ruas, Bairros e Cidades - CEPBrasil.org'.</msg>
+<status status="PASS" starttime="20200626 20:37:19.790" endtime="20200626 20:37:19.875"></status>
+</kw>
+<status status="PASS" starttime="20200626 20:37:11.245" endtime="20200626 20:37:19.875"></status>
+</kw>
+<kw name="Localizar o botão com o Estado de &quot;Rio de Janeiro&quot;" library="ResourceCepSuite">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//div[@class='row linha']</arg>
+</arguments>
+<status status="PASS" starttime="20200626 20:37:19.876" endtime="20200626 20:37:20.049"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[@class="box"]//h4[contains(text(), "${estado}")]</arg>
+</arguments>
+<msg timestamp="20200626 20:37:20.050" level="INFO">Clicking element 'xpath=//a[@class="box"]//h4[contains(text(), "Rio de Janeiro")]'.</msg>
+<status status="PASS" starttime="20200626 20:37:20.049" endtime="20200626 20:37:25.114"></status>
+</kw>
+<status status="PASS" starttime="20200626 20:37:19.876" endtime="20200626 20:37:25.115"></status>
+</kw>
+<kw name="Localizar o botão a Cidade de &quot;Rio de Janeiro&quot;" library="ResourceCepSuite">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//div[@class='row linha']</arg>
+</arguments>
+<status status="PASS" starttime="20200626 20:37:25.118" endtime="20200626 20:37:25.159"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[@class="box"]//h4[contains(text(), "${cidade}")]</arg>
+</arguments>
+<msg timestamp="20200626 20:37:25.160" level="INFO">Clicking element 'xpath=//a[@class="box"]//h4[contains(text(), "Rio de Janeiro")]'.</msg>
+<status status="PASS" starttime="20200626 20:37:25.159" endtime="20200626 20:37:26.354"></status>
+</kw>
+<status status="PASS" starttime="20200626 20:37:25.116" endtime="20200626 20:37:26.355"></status>
+</kw>
+<kw name="Localizar o botão com o Bairro &quot;Barra da Tijuca&quot;" library="ResourceCepSuite">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//div[@class='row linha']</arg>
+</arguments>
+<status status="PASS" starttime="20200626 20:37:26.356" endtime="20200626 20:37:26.793"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[@class="box"]//h4[contains(text(), "${bairro}")]</arg>
+</arguments>
+<msg timestamp="20200626 20:37:26.795" level="INFO">Clicking element 'xpath=//a[@class="box"]//h4[contains(text(), "Barra da Tijuca")]'.</msg>
+<status status="PASS" starttime="20200626 20:37:26.794" endtime="20200626 20:37:28.093"></status>
+</kw>
+<status status="PASS" starttime="20200626 20:37:26.355" endtime="20200626 20:37:28.093"></status>
+</kw>
+<kw name="Localizar o botão com o CEP &quot;22640-102&quot;" library="ResourceCepSuite">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//div[@class='row linha']</arg>
+</arguments>
+<status status="PASS" starttime="20200626 20:37:28.095" endtime="20200626 20:37:28.524"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[@class="box"]//h4[contains(text(), "${cep}")]</arg>
+</arguments>
+<msg timestamp="20200626 20:37:28.525" level="INFO">Clicking element 'xpath=//a[@class="box"]//h4[contains(text(), "22640-102")]'.</msg>
+<status status="PASS" starttime="20200626 20:37:28.524" endtime="20200626 20:37:29.922"></status>
+</kw>
+<status status="PASS" starttime="20200626 20:37:28.094" endtime="20200626 20:37:29.923"></status>
+</kw>
+<kw name="Conferir informações" library="ResourceCepSuite">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//div[@class='row linha']</arg>
+</arguments>
+<status status="PASS" starttime="20200626 20:37:29.925" endtime="20200626 20:37:30.451"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>//span[@itemprop="streetAddress"]</arg>
+</arguments>
+<assign>
+<var>${streetAddress}</var>
+</assign>
+<msg timestamp="20200626 20:37:30.516" level="INFO">${streetAddress} = Avenida das Américas</msg>
+<status status="PASS" starttime="20200626 20:37:30.451" endtime="20200626 20:37:30.517"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${streetAddress}</arg>
+</arguments>
+<msg timestamp="20200626 20:37:30.517" level="INFO">Avenida das Américas</msg>
+<status status="PASS" starttime="20200626 20:37:30.517" endtime="20200626 20:37:30.518"></status>
+</kw>
+<status status="PASS" starttime="20200626 20:37:29.924" endtime="20200626 20:37:30.518"></status>
+</kw>
+<kw name="Fechar navegador" library="ResourceCepSuite" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200626 20:37:30.519" endtime="20200626 20:37:31.530"></status>
+</kw>
+<status status="PASS" starttime="20200626 20:37:30.519" endtime="20200626 20:37:31.530"></status>
+</kw>
+<status status="PASS" starttime="20200626 20:36:27.940" endtime="20200626 20:37:31.531" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200626 20:36:26.627" endtime="20200626 20:37:31.558"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="CepSuite">CepSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

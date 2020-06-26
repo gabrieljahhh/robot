@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.3 on darwin)" generated="20200626 18:41:52.610" rpa="false">
+<suite id="s1" name="TestCaseAPIGithub" source="/Users/galeite/robotframework/githubtest/TestCaseAPIGithub.robot">
+<kw name="API Connect" library="ResourceAPI" type="setup">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>session</arg>
+<arg>${URL}</arg>
+<arg>verify=True</arg>
+</arguments>
+<msg timestamp="20200626 18:41:55.258" level="INFO">Creating Session using : alias=session, url=https://api.github.com/users, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20200626 18:41:55.256" endtime="20200626 18:41:55.259"></status>
+</kw>
+<status status="PASS" starttime="20200626 18:41:55.254" endtime="20200626 18:41:55.260"></status>
+</kw>
+<test id="s1-t1" name="Buscar um usuário cadastrado no github">
+<kw name="Buscar pelo usuário cadastro como: 'gabrieljahhh' no github" library="ResourceAPI">
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>session</arg>
+<arg>/${user}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20200626 18:41:55.838" level="INFO">GET Request : url=https://api.github.com/users/gabrieljahhh 
+ path_url=/users/gabrieljahhh 
+ headers={'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20200626 18:41:55.838" level="INFO">GET Response : url=https://api.github.com/users/gabrieljahhh 
+ status=200, reason=OK 
+ body={"login":"gabrieljahhh","id":44412210,"node_id":"MDQ6VXNlcjQ0NDEyMjEw","avatar_url":"https://avatars1.githubusercontent.com/u/44412210?v=4","gravatar_id":"","url":"https://api.github.com/users/gabrieljahhh","html_url":"https://github.com/gabrieljahhh","followers_url":"https://api.github.com/users/gabrieljahhh/followers","following_url":"https://api.github.com/users/gabrieljahhh/following{/other_user}","gists_url":"https://api.github.com/users/gabrieljahhh/gists{/gist_id}","starred_url":"https://api.github.com/users/gabrieljahhh/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/gabrieljahhh/subscriptions","organizations_url":"https://api.github.com/users/gabrieljahhh/orgs","repos_url":"https://api.github.com/users/gabrieljahhh/repos","events_url":"https://api.github.com/users/gabrieljahhh/events{/privacy}","received_events_url":"https://api.github.com/users/gabrieljahhh/received_events","type":"User","site_admin":false,"name":"Gabriel Leite","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":"Gabriel Leite Desenvolvedor FullStack.\r\n","twitter_username":null,"public_repos":1,"public_gists":0,"followers":0,"following":0,"created_at":"2018-10-23T18:05:06Z","updated_at":"2020-06-26T21:19:25Z"} 
+ </msg>
+<msg timestamp="20200626 18:41:55.839" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200626 18:41:55.263" endtime="20200626 18:41:55.839"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${resp}</arg>
+</arguments>
+<msg timestamp="20200626 18:41:55.840" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200626 18:41:55.839" endtime="20200626 18:41:55.840"></status>
+</kw>
+<status status="PASS" starttime="20200626 18:41:55.262" endtime="20200626 18:41:55.840"></status>
+</kw>
+<kw name="Verificar o status code '200'" library="ResourceAPI">
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${resp.json()}</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20200626 18:41:55.842" level="INFO">${name} = Gabriel Leite</msg>
+<status status="PASS" starttime="20200626 18:41:55.842" endtime="20200626 18:41:55.842"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${resp.status_code}' == '${code}'</arg>
+<arg>Log</arg>
+<arg>Sucesso! Usuário encontado! ${name}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Sucesso! Usuário encontado! ${name}</arg>
+</arguments>
+<msg timestamp="20200626 18:41:55.843" level="INFO">Sucesso! Usuário encontado! Gabriel Leite</msg>
+<status status="PASS" starttime="20200626 18:41:55.843" endtime="20200626 18:41:55.843"></status>
+</kw>
+<status status="PASS" starttime="20200626 18:41:55.843" endtime="20200626 18:41:55.844"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${resp.status_code}' == '${code}'</arg>
+<arg>Log</arg>
+<arg>Falhou! Usuário não encontado!</arg>
+</arguments>
+<status status="PASS" starttime="20200626 18:41:55.844" endtime="20200626 18:41:55.844"></status>
+</kw>
+<status status="PASS" starttime="20200626 18:41:55.841" endtime="20200626 18:41:55.844"></status>
+</kw>
+<status status="PASS" starttime="20200626 18:41:55.260" endtime="20200626 18:41:55.845" critical="yes"></status>
+</test>
+<doc>API github Users</doc>
+<status status="PASS" starttime="20200626 18:41:52.694" endtime="20200626 18:41:55.846"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="TestCaseAPIGithub">TestCaseAPIGithub</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
