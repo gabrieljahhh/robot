@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.2 on linux)" generated="20200626 06:03:30.005" rpa="false">
+<suite id="s1" name="Tests" source="/opt/robotframework/tests">
+<suite id="s1-s1" name="TestCaseXML" source="/opt/robotframework/tests/TestCaseXML.robot">
+<test id="s1-s1-t1" name="Realizando a leitura e manipulação de arquivo XML">
+<kw name="Manipulando o arquivo XML" library="ResourceXML">
+<kw name="Count Files In Directory" library="OperatingSystem">
+<doc>Wrapper for `Count Items In Directory` returning only file count.</doc>
+<arguments>
+<arg>${OUTPUT}</arg>
+</arguments>
+<assign>
+<var>${GET_ID}</var>
+</assign>
+<msg timestamp="20200626 06:03:30.240" level="INFO" html="yes">Listing contents of directory '&lt;a href="file:///opt/robotframework/temp/documents/output"&gt;/opt/robotframework/temp/documents/output&lt;/a&gt;'.</msg>
+<msg timestamp="20200626 06:03:30.241" level="FAIL">Directory '/opt/robotframework/temp/documents/output' does not exist.</msg>
+<status status="FAIL" starttime="20200626 06:03:30.239" endtime="20200626 06:03:30.241"></status>
+</kw>
+<status status="FAIL" starttime="20200626 06:03:30.238" endtime="20200626 06:03:30.241"></status>
+</kw>
+<status status="FAIL" starttime="20200626 06:03:30.236" endtime="20200626 06:03:30.242" critical="yes">Directory '/opt/robotframework/temp/documents/output' does not exist.</status>
+</test>
+<doc>Realizando testes de manuliação de arquivo XML!</doc>
+<status status="FAIL" starttime="20200626 06:03:30.135" endtime="20200626 06:03:30.245"></status>
+</suite>
+<status status="FAIL" starttime="20200626 06:03:30.017" endtime="20200626 06:03:30.250"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" id="s1-s1" name="TestCaseXML">Tests.TestCaseXML</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
