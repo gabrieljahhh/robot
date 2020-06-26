@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.2 on linux)" generated="20200626 06:03:30.005" rpa="false">
+<robot generator="Robot 3.1.2 (Python 3.8.2 on linux)" generated="20200626 15:33:29.692" rpa="false">
 <suite id="s1" name="Tests" source="/opt/robotframework/tests">
 <suite id="s1-s1" name="TestCaseXML" source="/opt/robotframework/tests/TestCaseXML.robot">
 <test id="s1-s1-t1" name="Realizando a leitura e manipulação de arquivo XML">
@@ -12,18 +12,18 @@
 <assign>
 <var>${GET_ID}</var>
 </assign>
-<msg timestamp="20200626 06:03:30.240" level="INFO" html="yes">Listing contents of directory '&lt;a href="file:///opt/robotframework/temp/documents/output"&gt;/opt/robotframework/temp/documents/output&lt;/a&gt;'.</msg>
-<msg timestamp="20200626 06:03:30.241" level="FAIL">Directory '/opt/robotframework/temp/documents/output' does not exist.</msg>
-<status status="FAIL" starttime="20200626 06:03:30.239" endtime="20200626 06:03:30.241"></status>
+<msg timestamp="20200626 15:33:29.847" level="INFO" html="yes">Listing contents of directory '&lt;a href="file:///opt/robotframework/temp/documents/output"&gt;/opt/robotframework/temp/documents/output&lt;/a&gt;'.</msg>
+<msg timestamp="20200626 15:33:29.847" level="FAIL">Directory '/opt/robotframework/temp/documents/output' does not exist.</msg>
+<status status="FAIL" starttime="20200626 15:33:29.846" endtime="20200626 15:33:29.847"></status>
 </kw>
-<status status="FAIL" starttime="20200626 06:03:30.238" endtime="20200626 06:03:30.241"></status>
+<status status="FAIL" starttime="20200626 15:33:29.845" endtime="20200626 15:33:29.848"></status>
 </kw>
-<status status="FAIL" starttime="20200626 06:03:30.236" endtime="20200626 06:03:30.242" critical="yes">Directory '/opt/robotframework/temp/documents/output' does not exist.</status>
+<status status="FAIL" starttime="20200626 15:33:29.843" endtime="20200626 15:33:29.848" critical="yes">Directory '/opt/robotframework/temp/documents/output' does not exist.</status>
 </test>
 <doc>Realizando testes de manuliação de arquivo XML!</doc>
-<status status="FAIL" starttime="20200626 06:03:30.135" endtime="20200626 06:03:30.245"></status>
+<status status="FAIL" starttime="20200626 15:33:29.745" endtime="20200626 15:33:29.853"></status>
 </suite>
-<status status="FAIL" starttime="20200626 06:03:30.017" endtime="20200626 06:03:30.250"></status>
+<status status="FAIL" starttime="20200626 15:33:29.696" endtime="20200626 15:33:29.861"></status>
 </suite>
 <statistics>
 <total>
