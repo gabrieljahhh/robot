@@ -1,12 +1,15 @@
 *** Settings ***
 Resource         ResourceCepSuite.robot
-
+Documentation    Testes foram realizados no site: https://cepbrasil.org/
 
 Test Setup       Abrir navegador
 Test Teardown    Fechar navegador
 
 
+
+
 *** Test Cases ***
+
 Cenário de Teste 01: Buscar um endereço pelo site UI
     Acessar o site
     Localizar o botão com o Estado de "São Paulo"
@@ -14,6 +17,7 @@ Cenário de Teste 01: Buscar um endereço pelo site UI
     Localizar o botão com o Bairro "Jardim São Luís"
     Localizar o botão com o CEP "05844-055"
     Conferir informações
+
 
 
 
