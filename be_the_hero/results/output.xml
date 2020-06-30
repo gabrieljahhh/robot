@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.3 on darwin)" generated="20200630 15:54:54.514" rpa="false">
+<suite id="s1" name="BeTheHero" source="/Users/galeite/robotframework/be_the_hero/BeTheHero.robot">
+<kw name="API Connect" library="ResourceAPI" type="setup">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>session</arg>
+<arg>${URL_API}</arg>
+<arg>verify=True</arg>
+</arguments>
+<msg timestamp="20200630 15:54:56.685" level="INFO">Creating Session using : alias=session, url=http://wfsweb.com:9001, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20200630 15:54:56.682" endtime="20200630 15:54:56.685"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:54:56.680" endtime="20200630 15:54:56.687"></status>
+</kw>
+<test id="s1-t1" name="Acessar o App Be The Hero e Cadastrar uma nova ONG">
+<kw name="Acessar o App Be The Hero" library="ResourceAPI">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200630 15:54:56.693" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200630 15:54:56.692" endtime="20200630 15:55:00.612"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20200630 15:55:00.614" level="INFO">Opening url 'http://wfsweb.com/hero/'</msg>
+<status status="PASS" starttime="20200630 15:55:00.613" endtime="20200630 15:55:03.016"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Be The Hero</arg>
+</arguments>
+<msg timestamp="20200630 15:55:03.028" level="INFO">Page title is 'Be The Hero'.</msg>
+<status status="PASS" starttime="20200630 15:55:03.017" endtime="20200630 15:55:03.028"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:54:56.691" endtime="20200630 15:55:03.029"></status>
+</kw>
+<kw name="Clicar no botão Não tenho Cadastro" library="ResourceAPI">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=register</arg>
+</arguments>
+<msg timestamp="20200630 15:55:03.031" level="INFO">Clicking element 'id=register'.</msg>
+<status status="PASS" starttime="20200630 15:55:03.030" endtime="20200630 15:55:03.161"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:03.029" endtime="20200630 15:55:03.162"></status>
+</kw>
+<kw name="No campo Nome da ONG: &quot;ONG AMIGOS DA LUZ&quot;" library="ResourceAPI">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=name</arg>
+<arg>${NOME}</arg>
+</arguments>
+<msg timestamp="20200630 15:55:03.164" level="INFO">Typing text 'ONG AMIGOS DA LUZ' into text field 'id=name'.</msg>
+<status status="PASS" starttime="20200630 15:55:03.164" endtime="20200630 15:55:03.601"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:03.162" endtime="20200630 15:55:03.602"></status>
+</kw>
+<kw name="No campo E-mail: &quot;amigosdaluz@amigosdaluz.com.br&quot;" library="ResourceAPI">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=email</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20200630 15:55:03.604" level="INFO">Typing text 'amigosdaluz@amigosdaluz.com.br' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20200630 15:55:03.603" endtime="20200630 15:55:03.967"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:03.602" endtime="20200630 15:55:03.968"></status>
+</kw>
+<kw name="No campo WhatsApp: &quot;1198765123&quot;" library="ResourceAPI">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=whatsapp</arg>
+<arg>${WHATSAPP}</arg>
+</arguments>
+<msg timestamp="20200630 15:55:03.970" level="INFO">Typing text '1198765123' into text field 'id=whatsapp'.</msg>
+<status status="PASS" starttime="20200630 15:55:03.969" endtime="20200630 15:55:04.210"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:03.968" endtime="20200630 15:55:04.210"></status>
+</kw>
+<kw name="No campo Cidade: &quot;São Paulo&quot;" library="ResourceAPI">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=cidade</arg>
+<arg>${CIDADE}</arg>
+</arguments>
+<msg timestamp="20200630 15:55:04.213" level="INFO">Typing text 'São Paulo' into text field 'id=cidade'.</msg>
+<status status="PASS" starttime="20200630 15:55:04.212" endtime="20200630 15:55:04.434"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:04.211" endtime="20200630 15:55:04.435"></status>
+</kw>
+<kw name="No campo UF: &quot;SP&quot;" library="ResourceAPI">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=uf</arg>
+<arg>${UF}</arg>
+</arguments>
+<msg timestamp="20200630 15:55:04.437" level="INFO">Typing text 'SP' into text field 'id=uf'.</msg>
+<status status="PASS" starttime="20200630 15:55:04.436" endtime="20200630 15:55:04.591"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:04.435" endtime="20200630 15:55:04.592"></status>
+</kw>
+<kw name="Clicar no botão Cadastrar" library="ResourceAPI">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=new_ong</arg>
+</arguments>
+<msg timestamp="20200630 15:55:04.593" level="INFO">Clicking element 'id=new_ong'.</msg>
+<status status="PASS" starttime="20200630 15:55:04.593" endtime="20200630 15:55:04.683"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:04.592" endtime="20200630 15:55:04.683"></status>
+</kw>
+<kw name="Armazenar ID que foi gerado para a ONG" library="ResourceAPI">
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<assign>
+<var>${ID}</var>
+</assign>
+<msg timestamp="20200630 15:55:05.202" level="INFO">${ID} = Seu ID de acesso: 41768430</msg>
+<status status="PASS" starttime="20200630 15:55:04.685" endtime="20200630 15:55:05.202"></status>
+</kw>
+<kw name="Get Substring" library="String">
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<arguments>
+<arg>${ID}</arg>
+<arg>18</arg>
+</arguments>
+<assign>
+<var>${ID}</var>
+</assign>
+<msg timestamp="20200630 15:55:05.205" level="INFO">${ID} = 41768430</msg>
+<status status="PASS" starttime="20200630 15:55:05.203" endtime="20200630 15:55:05.205"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${ID}</arg>
+</arguments>
+<msg timestamp="20200630 15:55:05.211" level="INFO">${ID} = 41768430</msg>
+<status status="PASS" starttime="20200630 15:55:05.207" endtime="20200630 15:55:05.211"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:04.684" endtime="20200630 15:55:05.212"></status>
+</kw>
+<kw name="No campo Sua ID deve digitar o ID que foi gerado" library="ResourceAPI">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=sua_id</arg>
+<arg>${ID}</arg>
+</arguments>
+<msg timestamp="20200630 15:55:05.214" level="INFO">Typing text '41768430' into text field 'id=sua_id'.</msg>
+<status status="PASS" starttime="20200630 15:55:05.214" endtime="20200630 15:55:05.463"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:05.213" endtime="20200630 15:55:05.463"></status>
+</kw>
+<kw name="Clicar no botão Entrar" library="ResourceAPI">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=entrar</arg>
+</arguments>
+<msg timestamp="20200630 15:55:05.465" level="INFO">Clicking element 'id=entrar'.</msg>
+<status status="PASS" starttime="20200630 15:55:05.464" endtime="20200630 15:55:05.561"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:05.464" endtime="20200630 15:55:05.562"></status>
+</kw>
+<kw name="Clicar no botão Cadastrar Novo Caso" library="ResourceAPI">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=new_case</arg>
+</arguments>
+<status status="PASS" starttime="20200630 15:55:05.563" endtime="20200630 15:55:06.060"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=new_case</arg>
+</arguments>
+<msg timestamp="20200630 15:55:06.061" level="INFO">Clicking element 'id=new_case'.</msg>
+<status status="PASS" starttime="20200630 15:55:06.060" endtime="20200630 15:55:06.196"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:05.562" endtime="20200630 15:55:06.197"></status>
+</kw>
+<kw name="No campo Titulo do Caso: &quot;Arrecadação de verba para compra de cestas basicas&quot;" library="ResourceAPI">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=titulo</arg>
+<arg>${TITULO}</arg>
+</arguments>
+<msg timestamp="20200630 15:55:06.203" level="INFO">Typing text 'Arrecadação de verba para compra de cestas basicas' into text field 'id=titulo'.</msg>
+<status status="PASS" starttime="20200630 15:55:06.202" endtime="20200630 15:55:06.940"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:06.198" endtime="20200630 15:55:06.941"></status>
+</kw>
+<kw name="No campo Descrição: &quot;Estamos arrecando dinheiro para comprar cestas basicas e atender a comunidade do Jardim São em meio a Pandemia&quot;" library="ResourceAPI">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=descricao</arg>
+<arg>${DESCRICAO}</arg>
+</arguments>
+<msg timestamp="20200630 15:55:06.944" level="INFO">Typing text 'Estamos arrecando dinheiro para comprar cestas basicas e atender a comunidade do Jardim São em meio a Pandemia' into text field 'id=descricao'.</msg>
+<status status="PASS" starttime="20200630 15:55:06.943" endtime="20200630 15:55:07.893"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:06.942" endtime="20200630 15:55:07.894"></status>
+</kw>
+<kw name="No campo valor: &quot;500.00&quot;" library="ResourceAPI">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=valor</arg>
+<arg>${VALOR}</arg>
+</arguments>
+<msg timestamp="20200630 15:55:07.896" level="INFO">Typing text '500.00' into text field 'id=valor'.</msg>
+<status status="PASS" starttime="20200630 15:55:07.895" endtime="20200630 15:55:08.073"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:07.894" endtime="20200630 15:55:08.074"></status>
+</kw>
+<kw name="Clicar no botão Cadastrar Caso" library="ResourceAPI">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=add_case</arg>
+</arguments>
+<msg timestamp="20200630 15:55:08.075" level="INFO">Clicking element 'id=add_case'.</msg>
+<status status="PASS" starttime="20200630 15:55:08.075" endtime="20200630 15:55:08.181"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:08.074" endtime="20200630 15:55:08.182"></status>
+</kw>
+<kw name="Clicar no Botão Logout" library="ResourceAPI">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=logout</arg>
+</arguments>
+<status status="PASS" starttime="20200630 15:55:08.184" endtime="20200630 15:55:08.687"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=logout</arg>
+</arguments>
+<msg timestamp="20200630 15:55:08.688" level="INFO">Clicking element 'id=logout'.</msg>
+<status status="PASS" starttime="20200630 15:55:08.688" endtime="20200630 15:55:08.773"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200630 15:55:08.773" endtime="20200630 15:55:09.539"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:08.182" endtime="20200630 15:55:09.540"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:54:56.688" endtime="20200630 15:55:09.541" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Acessar a API e validar as informações cadastradas pela ONG">
+<kw name="Validar ONG pelo ID gerado" library="ResourceAPI">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Content-Type=application/json</arg>
+</arguments>
+<assign>
+<var>${HEADERS}</var>
+</assign>
+<msg timestamp="20200630 15:55:09.549" level="INFO">${HEADERS} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20200630 15:55:09.548" endtime="20200630 15:55:09.549"></status>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<doc>Send a POST request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>session</arg>
+<arg>/sessions</arg>
+<arg>data={"id":"${ID}"}</arg>
+<arg>headers=${HEADERS}</arg>
+</arguments>
+<assign>
+<var>${RES}</var>
+</assign>
+<msg timestamp="20200630 15:55:10.019" level="INFO">POST Request : url=http://wfsweb.com:9001/sessions 
+ path_url=/sessions 
+ headers={'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '17'} 
+ body=b'{"id":"41768430"}' 
+ </msg>
+<msg timestamp="20200630 15:55:10.019" level="INFO">POST Response : url=http://wfsweb.com:9001/sessions 
+ status=200, reason=OK 
+ body={"name":"ONG AMIGOS DA LUZ"} 
+ </msg>
+<msg timestamp="20200630 15:55:10.020" level="INFO">${RES} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200630 15:55:09.550" endtime="20200630 15:55:10.020"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${RES.text}</arg>
+</arguments>
+<msg timestamp="20200630 15:55:10.021" level="INFO">{"name":"ONG AMIGOS DA LUZ"}</msg>
+<status status="PASS" starttime="20200630 15:55:10.020" endtime="20200630 15:55:10.021"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:09.546" endtime="20200630 15:55:10.021"></status>
+</kw>
+<kw name="Verificar os Casos Cadastrados pela ONG" library="ResourceAPI">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Authorization=${ID}</arg>
+</arguments>
+<assign>
+<var>${HEADERS}</var>
+</assign>
+<msg timestamp="20200630 15:55:10.023" level="INFO">${HEADERS} = {'Authorization': '41768430'}</msg>
+<status status="PASS" starttime="20200630 15:55:10.022" endtime="20200630 15:55:10.023"></status>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>session</arg>
+<arg>/profile</arg>
+<arg>headers=${HEADERS}</arg>
+</arguments>
+<assign>
+<var>${RES}</var>
+</assign>
+<msg timestamp="20200630 15:55:10.182" level="INFO">GET Request : url=http://wfsweb.com:9001/profile 
+ path_url=/profile 
+ headers={'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': '41768430'} 
+ body=None 
+ </msg>
+<msg timestamp="20200630 15:55:10.182" level="INFO">GET Response : url=http://wfsweb.com:9001/profile 
+ status=200, reason=OK 
+ body=[{"id":11,"title":"Arrecadação de verba para compra de cestas basicas","description":"Estamos arrecando dinheiro para comprar cestas basicas e atender a comunidade do Jardim São em meio a Pandemia","value":500,"ong_id":"41768430"}] 
+ </msg>
+<msg timestamp="20200630 15:55:10.182" level="INFO">${RES} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200630 15:55:10.023" endtime="20200630 15:55:10.182"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${RES.text}</arg>
+</arguments>
+<msg timestamp="20200630 15:55:10.183" level="INFO">[{"id":11,"title":"Arrecadação de verba para compra de cestas basicas","description":"Estamos arrecando dinheiro para comprar cestas basicas e atender a comunidade do Jardim São em meio a Pandemia","value":500,"ong_id":"41768430"}]</msg>
+<status status="PASS" starttime="20200630 15:55:10.183" endtime="20200630 15:55:10.183"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:10.021" endtime="20200630 15:55:10.184"></status>
+</kw>
+<kw name="Listar todas as ONGS cadastradas" library="ResourceAPI">
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>session</arg>
+<arg>/ongs</arg>
+</arguments>
+<assign>
+<var>${RES}</var>
+</assign>
+<msg timestamp="20200630 15:55:10.343" level="INFO">GET Request : url=http://wfsweb.com:9001/ongs 
+ path_url=/ongs 
+ headers={'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20200630 15:55:10.343" level="INFO">GET Response : url=http://wfsweb.com:9001/ongs 
+ status=200, reason=OK 
+ body=[{"id":"e0b723db","name":"NOVA ONG teste","email":"contato@gmail.com","whatsapp":"1234567890","city":"São Paulo","uf":"SP"},{"id":"8535042a","name":"NOVA","email":"galeite@gmai.com","whatsapp":"1234567901","city":"SAO PAULO","uf":"SP"},{"id":"f87f3967","name":"123","email":"1231212321321@dsa.com.br","whatsapp":"32132132111","city":"sao paulo","uf":"sp"},{"id":"fe9c88b8","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"e414bc65","name":"12321321321321","email":"galeite@gmail.com","whatsapp":"1231231231","city":"sao paulo","uf":"as"},{"id":"560d1000","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"79f5319e","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"cabc405c","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"d0b48d11","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"5dd18230","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"5c3f3dd5","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"ef2bd820","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"ee2b6081","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"51ed4741","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"1a19b834","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"0ce58e16","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"95fd42ec","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"e761e732","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"4d3657d8","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"b65cca49","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"abc05ffe","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"3f806657","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"b9ebc7e6","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"41768430","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"}] 
+ </msg>
+<msg timestamp="20200630 15:55:10.344" level="INFO">${RES} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200630 15:55:10.185" endtime="20200630 15:55:10.344"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${RES.text}</arg>
+</arguments>
+<msg timestamp="20200630 15:55:10.346" level="INFO">[{"id":"e0b723db","name":"NOVA ONG teste","email":"contato@gmail.com","whatsapp":"1234567890","city":"São Paulo","uf":"SP"},{"id":"8535042a","name":"NOVA","email":"galeite@gmai.com","whatsapp":"1234567901","city":"SAO PAULO","uf":"SP"},{"id":"f87f3967","name":"123","email":"1231212321321@dsa.com.br","whatsapp":"32132132111","city":"sao paulo","uf":"sp"},{"id":"fe9c88b8","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"e414bc65","name":"12321321321321","email":"galeite@gmail.com","whatsapp":"1231231231","city":"sao paulo","uf":"as"},{"id":"560d1000","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"79f5319e","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"cabc405c","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"d0b48d11","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"5dd18230","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"5c3f3dd5","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"ef2bd820","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"ee2b6081","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"51ed4741","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"1a19b834","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"0ce58e16","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"95fd42ec","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"e761e732","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"4d3657d8","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"b65cca49","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"abc05ffe","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"3f806657","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"b9ebc7e6","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":"41768430","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"}]</msg>
+<status status="PASS" starttime="20200630 15:55:10.344" endtime="20200630 15:55:10.347"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:10.184" endtime="20200630 15:55:10.347"></status>
+</kw>
+<kw name="Listar todos os Casos Cadastrados" library="ResourceAPI">
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>session</arg>
+<arg>/incidents</arg>
+</arguments>
+<assign>
+<var>${RES}</var>
+</assign>
+<msg timestamp="20200630 15:55:10.506" level="INFO">GET Request : url=http://wfsweb.com:9001/incidents 
+ path_url=/incidents 
+ headers={'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20200630 15:55:10.507" level="INFO">GET Response : url=http://wfsweb.com:9001/incidents 
+ status=200, reason=OK 
+ body=[{"id":5,"title":"Arrecadação de verba para compra de cestas basicas","description":"Estamos arrecando dinheiro para comprar cestas basicas e atender a comunidade do Jardim São em meio a Pandemia","value":500,"ong_id":"95fd42ec","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":6,"title":"Arrecadação de verba para compra de cestas basicas","description":"Estamos arrecando dinheiro para comprar cestas basicas e atender a comunidade do Jardim São em meio a Pandemia","value":500,"ong_id":"e761e732","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":7,"title":"Arrecadação de verba para compra de cestas basicas","description":"Estamos arrecando dinheiro para comprar cestas basicas e atender a comunidade do Jardim São em meio a Pandemia","value":500,"ong_id":"b65cca49","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":8,"title":"Arrecadação de verba para compra de cestas basicas","description":"Estamos arrecando dinheiro para comprar cestas basicas e atender a comunidade do Jardim São em meio a Pandemia","value":500,"ong_id":"abc05ffe","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":9,"title":"Arrecadação de verba para compra de cestas basicas","description":"Estamos arrecando dinheiro para comprar cestas basicas e atender a comunidade do Jardim São em meio a Pandemia","value":500,"ong_id":"3f806657","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"}] 
+ </msg>
+<msg timestamp="20200630 15:55:10.507" level="INFO">${RES} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200630 15:55:10.348" endtime="20200630 15:55:10.508"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${RES.text}</arg>
+</arguments>
+<msg timestamp="20200630 15:55:10.510" level="INFO">[{"id":5,"title":"Arrecadação de verba para compra de cestas basicas","description":"Estamos arrecando dinheiro para comprar cestas basicas e atender a comunidade do Jardim São em meio a Pandemia","value":500,"ong_id":"95fd42ec","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":6,"title":"Arrecadação de verba para compra de cestas basicas","description":"Estamos arrecando dinheiro para comprar cestas basicas e atender a comunidade do Jardim São em meio a Pandemia","value":500,"ong_id":"e761e732","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":7,"title":"Arrecadação de verba para compra de cestas basicas","description":"Estamos arrecando dinheiro para comprar cestas basicas e atender a comunidade do Jardim São em meio a Pandemia","value":500,"ong_id":"b65cca49","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":8,"title":"Arrecadação de verba para compra de cestas basicas","description":"Estamos arrecando dinheiro para comprar cestas basicas e atender a comunidade do Jardim São em meio a Pandemia","value":500,"ong_id":"abc05ffe","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"},{"id":9,"title":"Arrecadação de verba para compra de cestas basicas","description":"Estamos arrecando dinheiro para comprar cestas basicas e atender a comunidade do Jardim São em meio a Pandemia","value":500,"ong_id":"3f806657","name":"ONG AMIGOS DA LUZ","email":"amigosdaluz@amigosdaluz.com.br","whatsapp":"1198765123","city":"São Paulo","uf":"SP"}]</msg>
+<status status="PASS" starttime="20200630 15:55:10.509" endtime="20200630 15:55:10.511"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:10.347" endtime="20200630 15:55:10.512"></status>
+</kw>
+<status status="PASS" starttime="20200630 15:55:09.543" endtime="20200630 15:55:10.512" critical="yes"></status>
+</test>
+<doc>Implementação de automação em site para doações para necessidades. http://wfsweb.com/hero/</doc>
+<status status="PASS" starttime="20200630 15:54:54.516" endtime="20200630 15:55:10.516"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="BeTheHero">BeTheHero</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
